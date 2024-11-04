@@ -1,0 +1,22 @@
+[
+    {"code":{
+    "Spark Session Creation": {
+        "description": "Creates a Spark session for a PySpark application",
+        "code": "from pyspark.sql import SparkSession\n\nspark = SparkSession.builder.appName('MyApp').getOrCreate()"
+    },
+    "Pandas to Spark DF": {
+        "description": "Converts a Pandas DataFrame to a Spark DataFrame",
+        "code": "import pandas as pd\nfrom pyspark.sql import SparkSession\n\n# Create Pandas DataFrame\npandas_df = pd.DataFrame({'col1': [1, 2], 'col2': [3, 4]})\n\n# Convert to Spark DataFrame\nspark_df = spark.createDataFrame(pandas_df)"
+    },
+    "Pandas DF to Workbook": {
+        "description": "Exports a Pandas DataFrame to an Excel workbook",
+        "code": "import pandas as pd\n\n# Create Pandas DataFrame\ndf = pd.DataFrame({'col1': [1, 2], 'col2': [3, 4]})\n\n# Save to Excel workbook\ndf.to_excel('output.xlsx', index=False)"
+    }
+}},
+    {"paths":{
+        "pathA":"/a",
+        "pathB":"/b"
+    }
+    }
+
+]
